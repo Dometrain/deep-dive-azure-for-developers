@@ -1,0 +1,102 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Travel inspiration funtion app endpoints",
+    "description": "All travel inspiration API endpoints that have been migrated to a function app.",
+    "version": "v1"
+  },
+  "host": "appdev-func-dev-we-travelinspirationitineraries.azurewebsites.net",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/mostvieweditineraries": {
+      "post": {
+        "tags": [
+          "CreateMostViewedItinerariesFunction"
+        ],
+        "description": "Create a list of most-viewed itineraries itineraries",
+        "operationId": "CreateMostViewedItinerariesFunction",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "List of itineraries to create most viewed itineraries for the current user.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/itineraryDto"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Payload of String",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/itineraries": {
+      "get": {
+        "tags": [
+          "GetItineraries"
+        ],
+        "description": "Get the itineraries.",
+        "operationId": "GetItineraries",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "SearchFor",
+            "description": "Search for itineraries by part of their name or description.",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Payload of Array of ItineraryDto",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/itineraryDto"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "itineraryDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

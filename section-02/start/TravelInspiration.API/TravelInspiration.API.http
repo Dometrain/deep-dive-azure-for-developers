@@ -1,0 +1,54 @@
+@HostAddressRoot = https://localhost:7293
+
+GET {{HostAddressRoot}}/api/destinations?searchFor=San
+Accept: application/json
+
+###
+GET {{HostAddressRoot}}/api/destinations?searchFor=Antwerp,%20Belgium
+Accept: application/json
+
+###
+GET {{HostAddressRoot}}/api/destinations
+Accept: application/json
+
+###
+PUT {{HostAddressRoot}}/api/destinations/1/images
+Accept: application/json
+Content-Type: application/json
+
+ { 
+   "ImagesToUpdate": [ 
+    {
+      "Name": "antwerp.jpg",
+      "ImageBytes": "base64string"
+    }, 
+    {
+      "Name": "antwerp3.jpg",
+      "ImageBytes": "base64string"
+    }]
+ }
+
+###
+GET {{HostAddressRoot}}/api/processdestinationimagechanges
+Accept: application/json 
+
+###
+GET {{HostAddressRoot}}/api/itineraries?searchFor=Paris
+Accept: application/json
+
+###
+GET {{HostAddressRoot}}/api/itineraries/1/stops
+Accept: application/json 
+ 
+###
+
+GET https://appdevstdevwetravel.table.core.windows.net/Destinations?sp=r&st=2024-09-20T12:14:20Z&se=2024-09-21T12:14:20Z&spr=https&sv=2022-11-02&sig=r9Z434fU4txUOBjbsZV9r7i2d6N07esdppkEA0hjdrk%3D&tn=Destinations
+Accept: application/json
+
+### 
+GET https://appdevstdevwetravel.table.core.windows.net/Destinations?$filter=(Identifier%20ge%202)&sp=r&st=2024-09-20T12:14:20Z&se=2024-09-21T12:14:20Z&spr=https&sv=2022-11-02&sig=r9Z434fU4txUOBjbsZV9r7i2d6N07esdppkEA0hjdrk%3D&tn=Destinations
+Accept: application/json
+
+### 
+GET https://appdevstdevwetravel.table.core.windows.net/Destinations?$filter=(Identifier%20ge%202)&$select=Identifier,Name&sp=r&st=2024-09-20T12:14:20Z&se=2024-09-21T12:14:20Z&spr=https&sv=2022-11-02&sig=r9Z434fU4txUOBjbsZV9r7i2d6N07esdppkEA0hjdrk%3D&tn=Destinations
+Accept: application/json

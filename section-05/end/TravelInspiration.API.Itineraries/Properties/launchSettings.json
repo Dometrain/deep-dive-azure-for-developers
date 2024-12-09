@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "TravelInspiration.API.Itineraries": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7173",
+      "launchBrowser": false
+    }
+  }
+}

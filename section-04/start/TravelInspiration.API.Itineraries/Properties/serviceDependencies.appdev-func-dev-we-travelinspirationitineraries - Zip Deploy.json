@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/appdev-appi-dev-we-travelinspiration",
+      "type": "appInsights.azure",
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING"
+    },
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/appdevstdevwetravel",
+      "type": "storage.azure",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/appdev-func-dev-we-travelinspirationitineraries/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsTravelInspirationDbConn_A46D839DAC",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/appdev-sql-dev-we-travelinspiration/databases/appdev-sqldb-dev-we-travelinspiration",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:TravelInspirationDbConnection",
+      "dynamicId": null
+    }
+  }
+}

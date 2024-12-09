@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "type": "appInsights",
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:TravelInspirationDbConnection",
+      "dynamicId": null
+    }
+  }
+}

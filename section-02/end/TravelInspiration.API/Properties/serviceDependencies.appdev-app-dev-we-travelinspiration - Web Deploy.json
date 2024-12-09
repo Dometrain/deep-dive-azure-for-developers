@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/appdev-appi-dev-we-travelinspiration",
+      "type": "appInsights.azure",
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+      "dynamicId": null
+    },
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/appdev-app-dev-we-travelinspiration/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsTravelInspirationStorag_C8F73B5E49, /subscriptions/979324e5-17ea-450e-bed2-26d05ec4d43e/resourceGroups/appdev-rg-dev-we-travelinspiration/providers/Microsoft.Web/sites/appdev-app-dev-we-travelinspiration/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsTravelInspirationStorag_B0B43F1299",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/appdevstdevwetravel",
+      "type": "storage.azure",
+      "connectionId": "ConnectionStrings:TravelInspirationStorageConnectionString"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/appdev-app-dev-we-travelinspiration/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsTravelInspirationDbConn_A46D839DAC",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/appdev-sql-dev-we-travelinspiration/databases/appdev-sqldb-dev-we-travelinspiration",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:TravelInspirationDbConnection"
+    }
+  }
+}
