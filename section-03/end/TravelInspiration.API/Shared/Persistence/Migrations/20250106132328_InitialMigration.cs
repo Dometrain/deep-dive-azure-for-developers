@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace TravelInspiration.API.Migrations
+namespace TravelInspiration.API.Shared.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration
@@ -63,8 +63,8 @@ namespace TravelInspiration.API.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedOn", "Description", "LastModifiedBy", "LastModifiedOn", "Name", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2576), "Five great days in Paris", null, null, "A Trip to Paris", "KevinsUserId" },
-                    { 2, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2579), "A week in beautiful Antwerp", null, null, "Antwerp Extravaganza", "KevinsUserId" }
+                    { 1, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Five great days in Paris", null, null, "A Trip to Paris", "dummyuserid" },
+                    { 2, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "A week in beautiful Antwerp", null, null, "Antwerp Extravaganza", "dummyuserid" }
                 });
 
             migrationBuilder.InsertData(
@@ -72,12 +72,12 @@ namespace TravelInspiration.API.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedOn", "ImageUri", "ItineraryId", "LastModifiedBy", "LastModifiedOn", "Name" },
                 values: new object[,]
                 {
-                    { 1, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2838), "https://localhost:7120/images/eiffeltower.jpg", 1, null, null, "The Eiffel Tower" },
-                    { 2, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2844), "https://localhost:7120/images/louvre.jpg", 1, null, null, "The Louvre" },
-                    { 3, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2849), "https://localhost:7120/images/perelachaise.jpg", 1, null, null, "Père Lachaise Cemetery" },
-                    { 4, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2854), "https://localhost:7120/images/royalmuseum.jpg", 2, null, null, "The Royal Museum of Beautiful Arts" },
-                    { 5, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2858), "https://localhost:7120/images/stpauls.jpg", 2, null, null, "Saint Paul's Church" },
-                    { 6, "DATASEED", new DateTime(2024, 7, 4, 13, 51, 46, 455, DateTimeKind.Utc).AddTicks(2863), "https://localhost:7120/images/michelin.jpg", 2, null, null, "Michelin Restaurant Visit" }
+                    { 1, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "https://localhost:7120/images/eiffeltower.jpg", 1, null, null, "The Eiffel Tower" },
+                    { 2, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "https://localhost:7120/images/louvre.jpg", 1, null, null, "The Louvre" },
+                    { 3, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "https://localhost:7120/images/perelachaise.jpg", 1, null, null, "Père Lachaise Cemetery" },
+                    { 4, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "https://localhost:7120/images/royalmuseum.jpg", 2, null, null, "The Royal Museum of Beautiful Arts" },
+                    { 5, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "https://localhost:7120/images/stpauls.jpg", 2, null, null, "Saint Paul's Church" },
+                    { 6, "DATASEED", new DateTime(2025, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "https://localhost:7120/images/michelin.jpg", 2, null, null, "Michelin Restaurant Visit" }
                 });
 
             migrationBuilder.CreateIndex(
